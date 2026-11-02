@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>JoyaGoo Spreadsheet Guide | Fashion Finds & Category Lists</title>
+  <meta name="description" content="Explore a JoyaGoo spreadsheet guide for shoes, clothing and accessories. Learn how to compare product details, check sizing and organize your shopping shortlist.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#153f35">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JoyaGoo Spreadsheet — A More Considered Way to Find">
+  <meta property="og:description" content="A category-first fashion discovery guide with practical notes on sizing, product photos and shopping comparisons.">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JoyaGoo Spreadsheet Guide">
+  <meta name="twitter:description" content="Explore fashion categories and build a better-informed shopping shortlist.">
+  <!-- index.html: Add a self-referencing canonical URL once the final public address is known. -->
+  <style>
+    :root{
+      --paper:#f5f2e9;
+      --white:#fffdf8;
+      --ink:#202c27;
+      --green:#153f35;
+      --lime:#e3efac;
+      --muted:#626c62;
+      --line:#d9ddd0;
+      --serif:Georgia,"Times New Roman",serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible,summary:focus-visible{outline:3px solid #708c23;outline-offset:5px}
+    svg{display:block;max-width:100%;height:auto}
+    h1,h2,h3,p{margin:0}
+    h1,h2,h3{line-height:1.12}
+    .wrap{width:min(1240px,calc(100% - 48px));margin-inline:auto}
+    .announcement{background:var(--green);color:#eff3df;text-align:center;padding:9px 20px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+    .header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 0;border-bottom:1px solid var(--line)}
+    .logo{font-size:23px;font-weight:850;letter-spacing:-1px}
+    .logo span{color:#71834b}
+    .header-note{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+    .header-link{font-size:13px;font-weight:700;border-bottom:1px solid;padding-bottom:3px}
+    .hero{display:grid;grid-template-columns:1.22fr .78fr;gap:70px;align-items:center;padding:65px 0 49px}
+    .eyebrow{display:flex;align-items:center;gap:11px;font-size:11px;font-weight:750;letter-spacing:.18em;text-transform:uppercase;margin-bottom:23px}
+    .eyebrow:before{content:"";width:25px;height:2px;background:currentColor}
+    h1{font:clamp(48px,6.8vw,88px)/.99 var(--serif);letter-spacing:-.055em;max-width:800px}
+    h1 em{color:var(--green);font-weight:400}
+    .intro{max-width:610px;color:var(--muted);font-size:17px;margin-top:25px}
+    .actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:29px}
+    .button{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;padding:15px 23px;background:var(--green);color:white;font-size:13px;font-weight:700}
+    .text-link{font-size:13px;border-bottom:1px solid var(--ink);padding:5px 0}
+    .field-note{position:relative;padding:34px;background:var(--lime);transform:rotate(2deg);box-shadow:9px 10px 0 #e4e5d9}
+    .field-note .number{font:70px/.9 var(--serif);letter-spacing:-5px;color:var(--green)}
+    .field-note h2{font:30px/1.1 var(--serif);margin:18px 0}
+    .field-note p{font-size:14px}
+    .note-rule{height:1px;background:#a8b578;margin:23px 0}
+    .note-footer{display:flex;justify-content:space-between;font-size:10px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+    .section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:23px}
+    .section-top h2{font:clamp(28px,4vw,43px)/1.1 var(--serif);letter-spacing:-1.2px}
+    .section-top p{max-width:390px;color:var(--muted);font-size:13px}
+    .categories{padding:26px 0 55px}
+    .category-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .category{display:flex;min-height:91px;gap:12px;align-items:center;justify-content:space-between;padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white);transition:background .18s,color .18s}
+    .category:hover{background:var(--green);color:white}
+    .category small{display:block;font-size:10px;letter-spacing:.12em;opacity:.6;margin-bottom:5px}
+    .category strong{font-size:13px;line-height:1.4;display:block}
+    .category b{font-size:18px;font-weight:400}
+    .editorial{padding:38px 0 55px;border-top:1px solid var(--line)}
+    .image-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .art{overflow:hidden;background:#e9e6dc;aspect-ratio:1/1.08;position:relative}
+    .art svg{width:100%;height:100%;transition:transform .25s}
+    .visual-card:hover svg{transform:scale(1.035)}
+    .art-tag{position:absolute;top:13px;left:13px;font-size:9px;letter-spacing:.14em;padding:5px 9px;background:#ffffffc9}
+    .card-title{display:flex;justify-content:space-between;gap:10px;margin-top:16px;align-items:center}
+    .card-title h3{font-size:15px}
+    .visual-card p{font-size:12px;color:var(--muted);margin-top:7px}
+    .caption{font-size:11px;color:var(--muted);margin-top:18px}
+    .answer-band{display:grid;grid-template-columns:.45fr 1fr;gap:55px;background:var(--green);color:white;padding:42px}
+    .answer-band .eyebrow{color:var(--lime);margin-bottom:15px}
+    .answer-band h2{font:36px/1.1 var(--serif);letter-spacing:-1px}
+    .answer-band p{color:#e0e8dc;font-size:15px}
+    .answer-band p+p{margin-top:14px;font-size:13px;color:#bfcec0}
+    .guide{padding:64px 0}
+    .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:30px}
+    .guide-item{border-top:2px solid var(--green);padding-top:20px}
+    .step{font:36px/1 var(--serif);color:#7b8b6b}
+    .guide-item h3{font:25px/1.16 var(--serif);margin:18px 0 14px}
+    .guide-item p{font-size:14px;color:var(--muted)}
+    .comparison{width:100%;border-collapse:collapse;background:var(--white);font-size:13px}
+    .comparison caption{text-align:left;font:28px/1.2 var(--serif);margin-bottom:20px}
+    .comparison th,.comparison td{text-align:left;padding:17px 20px;border-bottom:1px solid var(--line);vertical-align:top}
+    .comparison th{background:#e9eddf;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+    .comparison td:first-child{font-weight:700;width:23%}
+    .table-wrap{overflow-x:auto}
+    .topics{margin:55px 0;padding:34px;border:1px solid var(--line)}
+    .topics h2{font:32px/1.15 var(--serif);margin-bottom:13px}
+    .topics>p{font-size:14px;color:var(--muted);max-width:760px}
+    .topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:27px}
+    .topic-grid h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:13px}
+    .topic-grid ul{margin:0;padding:0;list-style:none;color:var(--muted);font-size:12px;line-height:2}
+    .faq{display:grid;grid-template-columns:.6fr 1fr;gap:65px;padding:10px 0 65px}
+    .faq h2{font:43px/1.08 var(--serif);letter-spacing:-1.2px}
+    .faq .aside-copy{font-size:14px;color:var(--muted);margin-top:20px}
+    details{border-top:1px solid var(--line);padding:19px 0}
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{font-weight:650;font-size:14px;cursor:pointer;padding-right:15px}
+    details p{font-size:13px;color:var(--muted);margin-top:13px;max-width:640px}
+    .final-cta{display:flex;justify-content:space-between;align-items:center;gap:30px;background:var(--lime);padding:33px 38px;margin-bottom:45px}
+    .final-cta h2{font:32px/1.12 var(--serif)}
+    .final-cta p{font-size:13px;margin-top:9px;color:#465139}
+    footer{border-top:1px solid var(--line);padding:27px 0 35px;display:flex;justify-content:space-between;gap:35px}
+    footer p{font-size:11px;color:var(--muted);max-width:750px}
+    footer .logo{font-size:19px;white-space:nowrap}
+    @media(min-width:1600px){.hero{padding-top:80px}}
+    @media(max-width:950px){
+      .hero{gap:35px}
+      .field-note{padding:26px}
+      .category-grid{grid-template-columns:repeat(3,1fr)}
+      .image-grid{grid-template-columns:repeat(2,1fr);row-gap:30px}
+      .answer-band{gap:30px;grid-template-columns:.65fr 1fr}
+      .faq{gap:35px}
+    }
+    @media(max-width:640px){
+      .wrap{width:calc(100% - 32px)}
+      .announcement{font-size:9px;letter-spacing:.1em}
+      .header{padding:20px 0}
+      .header-note{display:none}
+      .logo{font-size:21px}
+      .hero{grid-template-columns:1fr;padding:39px 0 28px;gap:32px}
+      h1{font-size:57px}
+      .intro{font-size:15px}
+      .field-note{transform:none;box-shadow:none;padding:25px}
+      .field-note .number{font-size:48px}
+      .field-note h2{font-size:27px}
+      .section-top{display:block}
+      .section-top p{margin-top:13px}
+      .category-grid{grid-template-columns:repeat(2,1fr)}
+      .category{padding:14px;min-height:85px}
+      .categories{padding-bottom:36px}
+      .editorial{padding-top:30px}
+      .image-grid{gap:22px 12px}
+      .card-title h3{font-size:13px}
+      .visual-card p{font-size:11px}
+      .art-tag{font-size:8px;top:8px;left:8px;padding:4px 6px}
+      .answer-band{grid-template-columns:1fr;gap:20px;padding:27px}
+      .answer-band h2{font-size:32px}
+      .guide{padding:43px 0}
+      .guide-grid{grid-template-columns:1fr;gap:27px}
+      .guide-item h3{margin-top:12px}
+      .comparison th,.comparison td{padding:13px 12px}
+      .comparison{min-width:510px}
+      .topics{padding:23px;margin:36px 0}
+      .topic-grid{grid-template-columns:1fr;gap:22px}
+      .topic-grid ul{columns:2;column-gap:16px;font-size:11px}
+      .faq{grid-template-columns:1fr;gap:26px;padding-bottom:40px}
+      .faq h2{font-size:36px}
+      .final-cta{display:block;padding:26px}
+      .final-cta .button{margin-top:22px}
+      footer{flex-direction:column;gap:15px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{transition:none!important;scroll-behavior:auto!important}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"JoyaGoo Spreadsheet Guide",
+        "description":"An independent category-first guide to organizing fashion finds, comparing product details and checking sizing.",
+        "inLanguage":"en",
+        "about":{"@type":"Thing","name":"JoyaGoo spreadsheet"}
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What is a JoyaGoo spreadsheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"In shopping searches, a JoyaGoo spreadsheet generally refers to a curated table of product finds and source links. Its contents and maintenance depend on the person who created it."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Does this page provide a downloadable spreadsheet?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. This page is a category directory and shopping research guide. Its shopping links lead to CAFANS rather than a downloadable spreadsheet."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"How should I compare spreadsheet finds?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Compare the same variant, material, measurements, included items and current listing details. Record the currency and check whether shipping and other charges are included."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Do product photos prove brand authenticity?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. Photos, logos and spreadsheet descriptions do not establish authenticity. Check the seller's evidence, product provenance and applicable return terms before purchasing."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Is this an official JoyaGoo or fashion-brand website?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"No. This is an independent guide and is not presented as an official JoyaGoo, Nike, Louis Vuitton, Gucci or Hermès website."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="announcement">The fashion field guide · Discover thoughtfully · Compare the details</div>
+
+  <div class="wrap">
+    <header class="header">
+      <a class="logo" href="https://www.cafans.com" aria-label="Visit www.cafans.com">www.cafans<span>.com</span></a>
+      <span class="header-note">A category-first shopping companion</span>
+      <a class="header-link" href="https://www.cafans.com">Explore the collection ↗</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="main-title">
+        <div>
+          <div class="eyebrow">Independent discovery guide</div>
+          <h1 id="main-title">JoyaGoo spreadsheet.<br><em>Find your next<br>good choice.</em></h1>
+          <p class="intro">Start with a category, narrow down the details, and build a shortlist that makes sense. Explore shoes, clothing and accessories with a practical guide to more considered shopping.</p>
+          <div class="actions">
+            <a class="button" href="https://www.cafans.com">Discover CAFANS <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://cafans.com/category-911-Shoes.html">Start with shoes ↗</a>
+          </div>
+        </div>
+        <aside class="field-note" aria-label="Shopping field note">
+          <div class="number">01—10</div>
+          <h2>Less searching.<br>More direction.</h2>
+          <p>Ten category shortcuts. One place to begin. Save the items you like, then compare measurements, materials and listing details before deciding.</p>
+          <div class="note-rule"></div>
+          <div class="note-footer"><span>Browse · Compare · Decide</span><span>Field notes / 01</span></div>
+        </aside>
+      </section>
+
+      <nav class="categories" aria-label="Shop product categories">
+        <div class="section-top">
+          <h2>Your category comes first.</h2>
+          <p>Go directly to the CAFANS category that matches what you are looking for.</p>
+        </div>
+        <div class="category-grid">
+          <a class="category" href="https://cafans.com/category-911-Shoes.html"><span><small>01 / FOOTWEAR</small><strong>Shoes</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-912-Hoodies%2FSweaters.html"><span><small>02 / LAYERS</small><strong>Hoodies/Sweaters</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-913-T-Shirts.html"><span><small>03 / EVERYDAY</small><strong>T-Shirts</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-914-Jackets.html"><span><small>04 / OUTERWEAR</small><strong>Jackets</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-915-Pants%2FShorts.html"><span><small>05 / BOTTOMS</small><strong>Pants/Shorts</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-916-Headwear.html"><span><small>06 / FINISHING TOUCH</small><strong>Headwear</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-917-Sets.html"><span><small>07 / COORDINATES</small><strong>Sets</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-918-underwear%2Funderpants.html"><span><small>08 / FOUNDATIONS</small><strong>Underwear/underpants</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-919-Jersey.html"><span><small>09 / SPORTSWEAR</small><strong>Jersey</strong></span><b aria-hidden="true">↗</b></a>
+          <a class="category" href="https://cafans.com/category-920-Accessories.html"><span><small>10 / THE DETAILS</small><strong>Accessories</strong></span><b aria-hidden="true">↗</b></a>
+        </div>
+      </nav>
+
+      <section class="editorial" aria-labelledby="visual-title">
+        <div class="section-top">
+          <h2 id="visual-title">Four directions. Your own style.</h2>
+          <p>An illustrated moodboard spanning athletic footwear, fashion, headwear and jewelry.</p>
+        </div>
+        <div class="image-grid">
+          <a class="visual-card" href="https://cafans.com/category-911-Shoes.html">
+            <div class="art">
+              <span class="art-tag">ATHLETIC / NIKE</span>
+              <svg viewBox="0 0 300 324" role="img" aria-label="Editorial illustration of a Nike-inspired athletic sneaker">
+                <rect width="300" height="324" fill="#dbe2d5"/>
+                <circle cx="224" cy="110" r="82" fill="#eaf0e2"/>
+                <path d="M0 272L300 232V324H0Z" fill="#c7d1bd"/>
+                <ellipse cx="155" cy="253" rx="112" ry="15" fill="#a8b59f" opacity=".4"/>
+                <g transform="rotate(-12 150 190)">
+                  <path d="M47 191L64 136Q84 128 100 149L133 157L170 184L236 201Q257 207 260 228L52 232Q35 217 47 191Z" fill="#f5f4ed" stroke="#153f35" stroke-width="2"/>
+                  <path d="M48 211Q102 225 258 218L260 237Q145 251 47 237Z" fill="#fffdf7" stroke="#153f35" stroke-width="2"/>
+                  <path d="M67 142L66 190L99 201L121 164" fill="#49634f"/>
+                  <path d="M99 202Q127 217 218 188Q173 219 133 221Q103 221 99 202Z" fill="#223f32"/>
+                  <path d="M113 159L151 185M106 169L142 193M101 180L132 201" stroke="#b7bcad" stroke-width="5"/>
+                  <path d="M183 201L236 209M184 208L241 216" stroke="#d0d4c8" stroke-width="2"/>
+                </g>
+                <text x="23" y="301" fill="#435942" font-family="Georgia,serif" font-size="15">Movement, made everyday.</text>
+              </svg>
+            </div>
+            <div class="card-title"><h3>Nike · Athletic direction</h3><span aria-hidden="true">↗</span></div>
+            <p>Compare silhouette, intended use and size measurements.</p>
+          </a>
+
+          <a class="visual-card" href="https://cafans.com/category-920-Accessories.html">
+            <div class="art">
+              <span class="art-tag">ACCESSORIES / LV</span>
+              <svg viewBox="0 0 300 324" role="img" aria-label="Editorial illustration of a Louis Vuitton-inspired monogram handbag">
+                <defs>
+                  <pattern id="monogram" width="45" height="43" patternUnits="userSpaceOnUse">
+                    <text x="7" y="20" fill="#b69263" font-family="Georgia,serif" font-size="13">LV</text>
+                    <path d="M30 28L34 33L30 38L26 33Z" fill="#b69263"/>
+                  </pattern>
+                </defs>
+                <rect width="300" height="324" fill="#e7d6c1"/>
+                <path d="M0 250L300 274V324H0Z" fill="#d4bfa3"/>
+                <circle cx="68" cy="91" r="58" fill="#efe4d4"/>
+                <ellipse cx="150" cy="260" rx="98" ry="13" fill="#9b7854" opacity=".24"/>
+                <path d="M69 137Q150 113 231 137L244 246Q150 268 56 246Z" fill="#573c2b" stroke="#442f23" stroke-width="3"/>
+                <path d="M69 137Q150 113 231 137L244 246Q150 268 56 246Z" fill="url(#monogram)"/>
+                <path d="M104 151V113Q104 66 130 66Q150 66 150 113V143M154 143V110Q154 66 179 66Q202 66 202 113V151" fill="none" stroke="#bd8f59" stroke-width="10"/>
+                <path d="M71 138Q150 120 229 138" fill="none" stroke="#c79c65" stroke-width="6"/>
+                <rect x="98" y="139" width="15" height="32" rx="4" fill="#c3955f"/>
+                <rect x="193" y="139" width="15" height="32" rx="4" fill="#c3955f"/>
+                <text x="23" y="301" fill="#674b34" font-family="Georgia,serif" font-size="15">A study in texture &amp; form.</text>
+              </svg>
+            </div>
+            <div class="card-title"><h3>Louis Vuitton · Accessories</h3><span aria-hidden="true">↗</span></div>
+            <p>Look closely at dimensions, hardware and materials.</p>
+          </a>
+
+          <a class="visual-card" href="https://cafans.com/category-916-Headwear.html">
+            <div class="art">
+              <span class="art-tag">HEADWEAR / GUCCI</span>
+              <svg viewBox="0 0 300 324" role="img" aria-label="Editorial illustration of a Gucci-inspired green and red fashion cap">
+                <rect width="300" height="324" fill="#d7dfd5"/>
+                <rect x="204" width="96" height="324" fill="#c6d1c3"/>
+                <circle cx="73" cy="98" r="54" fill="#e9eddf"/>
+                <ellipse cx="151" cy="255" rx="111" ry="14" fill="#5c705a" opacity=".22"/>
+                <path d="M63 205Q55 112 132 104Q215 95 232 197L172 220Z" fill="#334d39" stroke="#263f2c" stroke-width="3"/>
+                <path d="M134 106Q113 147 123 211M140 106Q186 141 187 207" fill="none" stroke="#63765f" stroke-width="2"/>
+                <path d="M69 194Q151 172 229 190L231 207Q150 189 70 211Z" fill="#a33c38"/>
+                <path d="M70 211Q161 187 232 207Q257 213 267 233Q218 255 157 244L72 223Z" fill="#243c2a" stroke="#213624" stroke-width="3"/>
+                <text x="119" y="168" fill="#dec997" font-family="Georgia,serif" font-size="18" letter-spacing="2">GUCCI</text>
+                <text x="23" y="301" fill="#405740" font-family="Georgia,serif" font-size="15">Finish with a signature detail.</text>
+              </svg>
+            </div>
+            <div class="card-title"><h3>Gucci · Headwear direction</h3><span aria-hidden="true">↗</span></div>
+            <p>Check circumference, adjustability and fabric composition.</p>
+          </a>
+
+          <a class="visual-card" href="https://cafans.com/category-920-Accessories.html">
+            <div class="art">
+              <span class="art-tag">JEWELRY / HERMÈS</span>
+              <svg viewBox="0 0 300 324" role="img" aria-label="Editorial illustration of an Hermès-inspired enamel and gold bracelet">
+                <rect width="300" height="324" fill="#edc7a6"/>
+                <circle cx="224" cy="92" r="81" fill="#f6dbc1"/>
+                <path d="M0 268L300 232V324H0Z" fill="#dfb38b"/>
+                <ellipse cx="152" cy="255" rx="86" ry="13" fill="#a77342" opacity=".25"/>
+                <g transform="rotate(-24 150 180)">
+                  <ellipse cx="150" cy="185" rx="83" ry="65" fill="#b98135"/>
+                  <ellipse cx="150" cy="175" rx="83" ry="65" fill="#e3b864" stroke="#8b602d" stroke-width="2"/>
+                  <ellipse cx="150" cy="175" rx="63" ry="46" fill="#edc7a6" stroke="#9e743b" stroke-width="3"/>
+                  <path d="M72 170Q81 238 151 238Q218 238 230 172L230 192Q215 253 151 254Q84 251 72 190Z" fill="#bb6b31"/>
+                  <path d="M78 192Q99 235 150 235Q206 234 223 191L221 208Q200 245 151 245Q101 244 81 209Z" fill="#ef822f"/>
+                  <rect x="127" y="219" width="48" height="29" rx="4" fill="#eac77c" stroke="#9c7036" stroke-width="2"/>
+                  <path d="M139 225V243M162 225V243M139 234H162" stroke="#9c7036" stroke-width="5"/>
+                </g>
+                <text x="23" y="301" fill="#794c2b" font-family="Georgia,serif" font-size="15">Small details. Lasting interest.</text>
+              </svg>
+            </div>
+            <div class="card-title"><h3>Hermès · Jewelry direction</h3><span aria-hidden="true">↗</span></div>
+            <p>Compare fit, finish, fastening and care requirements.</p>
+          </a>
+        </div>
+        <p class="caption">Original editorial illustrations, not product photographs or evidence of stock, authenticity or brand affiliation. Category links open CAFANS; available listings may differ.</p>
+      </section>
+
+      <section class="answer-band" aria-labelledby="definition-title">
+        <div>
+          <div class="eyebrow">The quick answer</div>
+          <h2 id="definition-title">What is a JoyaGoo spreadsheet?</h2>
+        </div>
+        <div>
+          <p>In shopping searches, a <strong>JoyaGoo spreadsheet</strong> generally refers to a curated table of product finds and source links. It can help organize options by category, but the accuracy and freshness of each entry depend on its creator.</p>
+          <p>This page offers a category directory and a comparison guide. It does not provide a downloadable spreadsheet, verify listings or confirm whether a product link works with a particular shopping service.</p>
+        </div>
+      </section>
+
+      <section class="guide" aria-labelledby="guide-title">
+        <div class="section-top">
+          <h2 id="guide-title">From discovery to a useful shortlist.</h2>
+          <p>A JoyaGoo shopping guide built around three practical decisions.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-item">
+            <span class="step">01.</span>
+            <h3>Choose the category.</h3>
+            <p>Begin a JoyaGoo finds list with a clear purpose: everyday footwear, a warmer layer or a finishing accessory. Keeping categories separate makes similar items easier to compare.</p>
+          </article>
+          <article class="guide-item">
+            <span class="step">02.</span>
+            <h3>Read beyond the image.</h3>
+            <p>When researching JoyaGoo spreadsheet shoes or JoyaGoo spreadsheet clothing, check the exact variant, measurements, fabric and included items. A familiar photo does not establish product quality.</p>
+          </article>
+          <article class="guide-item">
+            <span class="step">03.</span>
+            <h3>Record what matters.</h3>
+            <p>Build your JoyaGoo spreadsheet accessories shortlist with the source URL, selected size, displayed currency and the date you checked. Compare shipping and other charges separately where applicable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="table-wrap" aria-label="Product comparison checklist">
+        <table class="comparison">
+          <caption>Keep these details beside every saved find.</caption>
+          <thead>
+            <tr><th scope="col">Detail</th><th scope="col">What to record</th><th scope="col">Why it helps</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Source &amp; variant</td><td>Product URL, color, size and selected option.</td><td>Avoid comparing different versions of the same listing.</td></tr>
+            <tr><td>Measurements</td><td>Garment measurements, footwear length or accessory dimensions.</td><td>Compare against an item that already fits you.</td></tr>
+            <tr><td>Materials</td><td>The seller's stated fabric, lining, finish and care instructions.</td><td>Identify missing information before ordering.</td></tr>
+            <tr><td>Price context</td><td>Currency, displayed price, check date and any known extra charges.</td><td>Keep item price separate from the estimated total cost.</td></tr>
+            <tr><td>Evidence &amp; terms</td><td>Available product photos, seller information and return conditions.</td><td>Know what is supported and what still needs checking.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="topics" aria-labelledby="topics-title">
+        <h2 id="topics-title">A search vocabulary for your next find.</h2>
+        <p>Use these related search ideas to narrow your research by product type or by the information you need. They are topic suggestions, not claims of verified inventory or measured search popularity.</p>
+        <div class="topic-grid">
+          <div>
+            <h3>Footwear &amp; clothing</h3>
+            <ul>
+              <li>joyagoo sneaker finds</li>
+              <li>joyagoo running shoes</li>
+              <li>joyagoo casual footwear</li>
+              <li>joyagoo hoodie finds</li>
+              <li>joyagoo sweater list</li>
+              <li>joyagoo t-shirt finds</li>
+              <li>joyagoo jacket guide</li>
+              <li>joyagoo pants finds</li>
+              <li>joyagoo shorts list</li>
+              <li>joyagoo matching sets</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Accessories &amp; details</h3>
+            <ul>
+              <li>joyagoo headwear finds</li>
+              <li>joyagoo cap sizing</li>
+              <li>joyagoo accessory list</li>
+              <li>joyagoo jewelry guide</li>
+              <li>joyagoo bracelet sizing</li>
+              <li>joyagoo bag dimensions</li>
+              <li>joyagoo jersey finds</li>
+              <li>joyagoo sportswear list</li>
+              <li>joyagoo underwear sizing</li>
+              <li>joyagoo outfit ideas</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Research &amp; comparison</h3>
+            <ul>
+              <li>how to use a joyagoo spreadsheet</li>
+              <li>joyagoo product comparison</li>
+              <li>joyagoo size chart guide</li>
+              <li>joyagoo product photo checklist</li>
+              <li>joyagoo material comparison</li>
+              <li>joyagoo shopping shortlist</li>
+              <li>joyagoo source link checklist</li>
+              <li>joyagoo shipping cost planning</li>
+              <li>joyagoo listing details</li>
+              <li>joyagoo spreadsheet organization</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <div>
+          <div class="eyebrow">Before you browse</div>
+          <h2 id="faq-title">A few useful<br>answers.</h2>
+          <p class="aside-copy">Clear expectations make a shopping list more useful. Start here, then check the details on the destination listing.</p>
+        </div>
+        <div>
+          <details open>
+            <summary>What is a JoyaGoo spreadsheet?</summary>
+            <p>In shopping searches, a JoyaGoo spreadsheet generally refers to a curated table of product finds and source links. Its contents and maintenance depend on the person who created it.</p>
+          </details>
+          <details>
+            <summary>Does this page provide a downloadable spreadsheet?</summary>
+            <p>No. This page is a category directory and shopping research guide. Its shopping links lead to CAFANS rather than a downloadable spreadsheet.</p>
+          </details>
+          <details>
+            <summary>How should I compare spreadsheet finds?</summary>
+            <p>Compare the same variant, material, measurements, included items and current listing details. Record the currency and check whether shipping and other charges are included.</p>
+          </details>
+          <details>
+            <summary>Do product photos prove brand authenticity?</summary>
+            <p>No. Photos, logos and spreadsheet descriptions do not establish authenticity. Check the seller's evidence, product provenance and applicable return terms before purchasing.</p>
+          </details>
+          <details>
+            <summary>Is this an official JoyaGoo or fashion-brand website?</summary>
+            <p>No. This is an independent guide and is not presented as an official JoyaGoo, Nike, Louis Vuitton, Gucci or Hermès website.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="browse-title">
+        <div>
+          <h2 id="browse-title">Start with something you will actually wear.</h2>
+          <p>Explore the categories. Save your favorites. Let the details guide your decision.</p>
+        </div>
+        <a class="button" href="https://www.cafans.com">Browse CAFANS <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="logo" href="https://www.cafans.com">www.cafans<span>.com</span></a>
+      <p>Independent fashion discovery and shopping research guide. Brand names identify editorial subjects and remain the property of their respective owners. No affiliation or endorsement is implied. Confirm product details, availability and purchase terms on the destination website.</p>
+    </footer>
+  </div>
+</body>
+</html>
